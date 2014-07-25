@@ -1,0 +1,62 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 100%;
+	padding: 1em;
+}
+
+body {
+	max-width: 800px;
+	margin: auto;
+}
+
+html, body {
+	line-height: 1.5;
+}
+
+/* Set the vertical rhythm for all block level elements. */
+address, article, aside, audio,
+blockquote, canvas, dd, div, dl, 
+fieldset, figcaption, figure, footer, form, 
+h1, h2, h3, h4, h5, h6, header, hgroup, hr, 
+noscript, ol, output, p, pre, section, 
+table, tfoot, ul, video {
+	margin-bottom: 24px;
+}
+
+i {
+	font-style: italic;
+}
+
+h1 {
+	font-weight: bold;
+	font-size: 32px;
+	text-align: center;
+}
+
+h2 {
+	font-weight: bold;
+	font-size: 20px;
+	text-align: center;
+}
+
+table {
+	width: 100%;
+	vertical-align: top;
+	background-color: white;
+}
+
+th, td {
+	border: 1px solid #e6e6e6;
+	padding: 0.5em;
+}
+
+th {
+	background-color: #f6f6f6;
+}
+  
+.text--center {
+	text-align: center;
+}

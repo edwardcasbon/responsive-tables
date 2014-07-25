@@ -1,0 +1,16 @@
+@media only screen and (max-width: 600px) {
+	thead {
+		display: none; /* Hide the table heading row */
+	}
+	th, td {
+		float: left;
+		clear: both;
+		width: 100%;
+		text-align: center;
+	}
+	td:before {
+		content: attr(title); /* Add the column heading to the cell */
+		display: block;
+	}
+	
+}

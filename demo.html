@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+	<head>
+		<!-- Meta -->
+		<meta charset="utf-8">
+		<title>Responsive tables</title>
+		
+		<!-- Stylesheets (Only need responsive-tables.css for your project) -->
+		<link rel="stylesheet" href="reset.css">
+		<link rel="stylesheet" href="base.css">
+		<link rel="stylesheet" href="responsive-tables.css">
+	</head>
+	<body>
+		<h1>Responsive tables.</h1>
+		<p class="text--center"><i>All major browsers & IE9+ - Basically all browsers that support media queries</i></p>
+		<p>The responsive tables CSS used here utilises media queries to collapse tables into stackable table cells at a defined width.</p>
+		<p>When marked up correctly, the column headings will be inserted into the table cell when it collapses. This is done by displaying the cell's "title" attribute in a "before" pseudo-element.</p>
+		<p>The "before" pseudo-element acts as a separate element and therefore can be style appropriately to your requirements.</p>
+		
+		<h2>Using CSS only</h2>
+		<p>This table uses CSS only to add the column headings to the cell. In order for this to work the "title" attribute must be added to each cell with the value being the column heading.</p>
+		<table>
+			<caption>Sample table: Areas of the Nordic countries, in sq km</caption>
+			<thead>
+				<tr>
+					<th scope="col">Country</th>
+					<th scope="col">Total area</th>
+					<th scope="col">Land area</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row">Denmark</th>
+					<td title="Total area">43,070</td>
+					<td title="Land area">42,370</td>
+				</tr>
+				<tr>
+					<th scope="row">Finland</th>
+					<td title="Total area">337,030</td>
+					<td title="Land area">305,470</td>
+				</tr>
+				<tr>
+					<th scope="row">Iceland</th>
+					<td title="Total area">103,000</td>
+					<td title="Land area">100,250</td>
+				</tr>
+				<tr>
+					<th scope="row">Norway</th>
+					<td title="Total area">324,220</td>
+					<td title="Land area">307,860</td>
+				</tr>
+				<tr>
+					<th scope="row">Sweden</th>
+					<td title="Total area">449,964</td>
+					<td title="Land area">410,928</td>
+				</tr>
+			</tbody>
+		</table>
+		
+		<h2>Using the JavaScript polyfill</h2>
+		<p>This table uses the JavaScript polyfill to add the column headings to the cell, rather than having to manually add the "title" attribute to every data cell.</p>
+		<p><i>Note: Only include the JavaScript polyfill if you don't add the headings using the "title" attribute, otherwise you don't need it.</i></p>
+		<table>
+			<caption>Sample table: Areas of the Nordic countries, in sq km</caption>
+			<thead>
+				<tr>
+					<th scope="col">Country</th>
+					<th scope="col">Total area</th>
+					<th scope="col">Land area</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row">Denmark</th>
+					<td>43,070</td>
+					<td>42,370</td>
+				</tr>
+				<tr>
+					<th scope="row">Finland</th>
+					<td>337,030</td>
+					<td>305,470</td>
+				</tr>
+				<tr>
+					<th scope="row">Iceland</th>
+					<td>103,000</td>
+					<td>100,250</td>
+				</tr>
+				<tr>
+					<th scope="row">Norway</th>
+					<td>324,220</td>
+					<td>307,860</td>
+				</tr>
+				<tr>
+					<th scope="row">Sweden</th>
+					<td>449,964</td>
+					<td>410,928</td>
+				</tr>
+			</tbody>
+		</table>
+		
+		<h2>Basic table example, without row headings</h2>
+		<p>The table below doesn't include row level headings, but the column headings are still inserted as expected.</p>
+		<table>
+			<thead>
+				<tr>
+					<th scope="col">Country</th>
+					<th scope="col">Total area</th>
+					<th scope="col">Land area</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Denmark</td>
+					<td>43,070</td>
+					<td>42,370</td>
+				</tr>
+				<tr>
+					<td>Finland</td>
+					<td>337,030</td>
+					<td>305,470</td>
+				</tr>
+				<tr>
+					<td>Iceland</td>
+					<td>103,000</td>
+					<td>100,250</td>
+				</tr>
+				<tr>
+					<td>Norway</td>
+					<td>324,220</td>
+					<td>307,860</td>
+				</tr>
+				<tr>
+					<td>Sweden</td>
+					<td>449,964</td>
+					<td>410,928</td>
+				</tr>
+			</tbody>
+		</table>
+		
+		
+		<!-- JavaScript polyfill -->
+		<script src="responsive-tables.js"></script>
+		
+	</body>
+</html>
